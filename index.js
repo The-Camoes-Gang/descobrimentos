@@ -11,7 +11,7 @@ const quotes = [
     {by: 'Luna', desc:'Garrosh did nothing wrong. You did.'}
 ]
 
-const commandList = '?quotes'
+const commandList = ['?quotes']
 
 const prefix = "?";
 client.on("message", function(message) { 
