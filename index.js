@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
 require('dotenv').config();
+const Discord = require("discord.js");
 const client = new Discord.Client();
 const quotes = [
     {by: 'John Johnson', desc:'First, solve the problem. Then, write the code.'},
