@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vue/cli": "^4.5.13",
     "bcrypt": "^5.0.1",
     "concurrently": "^6.1.0",
     "discord.js": "^12.5.3",
