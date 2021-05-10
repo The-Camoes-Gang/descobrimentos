@@ -1,5 +1,12 @@
 require('dotenv').config();
+const routes = require("./routes")
+const express = require('express')
 const Discord = require("discord.js");
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB, {useNewUrlParser: true, useUnifiedTopology: true});
+
+const app = express()
 const client = new Discord.Client();
 const quotes = [
     {by: 'John Johnson', desc:'First, solve the problem. Then, write the code.'},
@@ -11,7 +18,16 @@ const quotes = [
     {by: 'Luna', desc:'Garrosh did nothing wrong. You did.'}
 ]
 
-const commandList = ['"?quotes"', '"test"']
+const commandList = ['?quotes']
+
+app.use(express.json())
+
+app.use('/users', routes.users)
+app.use('/auth', routes.auth)
+
+app.listen(process.env.PORT || 4000, () => {
+    console.log(`Example app listening at ${process.env.PORT} || 4000`)
+  })
 
 const prefix = "?";
 client.on("message", function(message) { 
