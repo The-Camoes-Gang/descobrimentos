@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
+require('dotenv').config();
 const client = new Discord.Client();
 const quotes = [
     {by: 'John Johnson', desc:'First, solve the problem. Then, write the code.'},
@@ -27,4 +27,4 @@ client.on("message", function(message) {
     }  
 });  
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
