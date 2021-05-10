@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"node app.js\" \"cd frontend && npm run serve\""
+    "start": "concurrently --kill-others-on-fail \"cd backend && node app.js\" \"cd frontend && npm run serve\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",

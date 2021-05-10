@@ -1,1 +1,1 @@
-worker: node app.js
+web: node backend/app.js
