@@ -11,7 +11,9 @@ const quotes = [
     {by: 'Luna', desc:'Garrosh did nothing wrong. You did.'}
 ]
 
-const prefix = "!";
+const commandList = '?quotes'
+
+const prefix = "?";
 client.on("message", function(message) { 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -20,10 +22,13 @@ client.on("message", function(message) {
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
     
-  if (command === "quote") {
-      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-    const toSend = `"${randomQuote.desc}" - ${randomQuote.by}`;
-    message.reply(toSend);
+    if(command === "commands") {
+        message.reply(commandList)
+    }
+    if (command === "quote") {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+        const toSend = `"${randomQuote.desc}" - ${randomQuote.by}`;
+        message.reply(toSend);
     }  
 });  
 
