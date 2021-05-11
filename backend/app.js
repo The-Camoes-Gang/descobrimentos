@@ -15,7 +15,8 @@ const quotes = [
     {by: 'ImInYourFino', desc:'Breaking doors is the best medicine.'},
     {by: 'Mãe tuga', desc:'Come ou levas com o chinelo.'},
     {by: 'Rob Castanheira', desc:'Getting beaten up makes me feel alive'},
-    {by: 'Luna', desc:'Garrosh did nothing wrong. You did.'}
+    {by: 'Luna', desc:'Garrosh did nothing wrong. You did.'},
+    {by: 'Gigante', desc:"There's nothing wrong with the code. You just typed consoel.log"},
 ]
 
 const commandList = ['?quotes']
