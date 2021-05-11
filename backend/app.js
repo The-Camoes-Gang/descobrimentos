@@ -19,6 +19,10 @@ const quotes = [
     {by: 'Gigante', desc:"There's nothing wrong with the code. You just typed consoel.log"},
 ]
 
+const memes = [
+    {file: 'https://img-9gag-fun.9cache.com/photo/a6E5m69_700bwp.webp'}
+]
+
 const commandList = ['?quotes']
 
 app.use(express.json())
@@ -45,8 +49,11 @@ client.on("message", function(message) {
     if (command === "quote") {
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
         const toSend = `"${randomQuote.desc}" - ${randomQuote.by}`;
-        message.reply(toSend);
+        message.reply(toSend, randomQuote?.file && {files:[randomQuote.file]});
     }  
+    if(command === 'memepls') {
+        message.reply({files:[memes[0].file]})
+    }
 });  
 
 client.login(process.env.BOT_TOKEN);
