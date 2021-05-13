@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "cd frontend && npm run serve",
-    "build": "cd frontend && npm run build",
+    "serve": "cd frontend && vue-cli-service serve",
+    "build": "cd frontend && vue-cli-service build",
     "start": "cd backend && node app.js"
   },
   "author": "",
