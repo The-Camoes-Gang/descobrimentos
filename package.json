@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "npm run serve",
-    "build": "npm run build",
+    "build": "vue-cli-service build",
     "start": "cd backend && node app.js"
   },
   "author": "",
