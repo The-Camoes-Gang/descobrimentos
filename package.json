@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm run build",
-    "build-run": "npm run build && cd frontend && npm run serve",
+    "build-run": "npm build && cd frontend && npm run serve",
     "start": "cd backend && node app.js"
   },
   "author": "",
